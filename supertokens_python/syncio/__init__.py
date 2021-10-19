@@ -11,13 +11,16 @@
 # WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 # License for the specific language governing permissions and limitations
 # under the License.
-from supertokens_python import Supertokens, UsersResponse
+from supertokens_python import Supertokens
 from supertokens_python.async_to_sync_wrapper import sync
+from supertokens_python.types import UsersResponse
 
 try:
-    from typing import Literal, Union, List
+    from typing import Literal
 except ImportError:
     from typing_extensions import Literal
+
+from typing import Union, List
 
 
 def get_users_oldest_first(limit: Union[int, None] = None, pagination_token: Union[str, None] = None,
